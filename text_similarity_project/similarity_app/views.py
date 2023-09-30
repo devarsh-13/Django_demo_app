@@ -23,9 +23,6 @@ def calculate_similarity_view(request):
     text1 = data.get('text1', '')
     text2 = data.get('text2', '')
 
-    print(text1)
-    print(text2)
-
     word2vec_model = joblib.load('word2vec_model.pkl')
     similarity = calculate_similarity(text1, text2, word2vec_model)
 
